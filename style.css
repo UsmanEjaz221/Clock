@@ -1,0 +1,106 @@
+* {
+    padding: 0;
+    margin: 0;
+
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+    display: -webkit-flex;
+    display: -ms-flex;
+    background-color: #222222;                          /* comment this an un-comment the one below to see another theme of background */
+    /* background: radial-gradient(#686868, #1b1b1b); */    /* un-comment this and comment the line above to see another background theme */
+    color: #aaaaaa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    border-radius: 2rem;
+    align-items: center;
+    width: 50rem;
+    height: 15rem;
+}
+.blob {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    fill: #ba68c8;              /* color of the blob */
+    width: 50vmax;
+    animation: move 10s ease-in-out infinite alternate-reverse;
+    transform-origin: 50% 50%;
+}
+@keyframes move {
+    0% {
+        transform: scale(1) translate(0px, 30px);
+    }
+    30% {
+        transform: scale(0.8, 1) translate(80vw, 10vw) rotate(160deg); 
+    }
+    40% {
+        transform: scale(0.8, 1) translate(85vw, -10vw) rotate(200deg); 
+    }
+    80% {
+        transform: scale(1.3) translate(0vw, 50vh) rotate(-20deg); 
+    }
+    100% {
+        transform: scale(1) translate(10px, 30px);
+    }
+}
+
+#clock {
+    /* background-color: aliceblue; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    
+}
+.hidden {
+    visibility: hidden;
+}
+#day {
+    position: absolute;
+    top: 10.5rem;
+    z-index: -1;
+    /* background-color: lightcoral; */
+    width: 50rem;
+    height: 20rem;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18rem;
+    justify-content: center;
+}
+.date {
+    position: absolute;
+    top: 10.5rem;
+    z-index: -1;
+    /* background-color: lightcoral; */
+    color: #222222;
+    width: 50rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    /* padding: 0 1.5rem 0 0; */
+}
+.time {
+    width: 14.5rem;
+    height: 14.5rem;
+    border-radius: 50%;
+    background-color: #aaaaaaee;
+    /* background-color: rgb(95, 158, 160); */
+    color: #222222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11.5rem;
+}
