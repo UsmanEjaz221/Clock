@@ -21,7 +21,7 @@ body {
 
 #container {
     border-radius: 2rem;
-    align-items: center;
+    align-self: center;
     width: 50rem;
     height: 15rem;
 }
@@ -68,7 +68,7 @@ body {
 }
 #day {
     position: absolute;
-    top: 10.5rem;
+    top: 19.5rem;
     z-index: -1;
     /* background-color: lightcoral; */
     width: 50rem;
@@ -81,7 +81,7 @@ body {
 }
 .date {
     position: absolute;
-    top: 10.5rem;
+    top: 19.5rem;
     z-index: -1;
     /* background-color: lightcoral; */
     color: #222222;
@@ -91,6 +91,15 @@ body {
     align-items: center;
     justify-content: end;
     /* padding: 0 1.5rem 0 0; */
+}
+
+@media (min-width: 2000px) {
+    #day {
+        top: 46rem;
+    }
+    .date {
+        top: 46rem;
+    }
 }
 .time {
     width: 14.5rem;
